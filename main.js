@@ -25,7 +25,10 @@ document.getElementById('add-money-btn').addEventListener('click', function(e){
 // cash out money feature
 document.getElementById('withdraw-btn').addEventListener('click', function(e){
     e.preventDefault
-    console.log('gggggg')
+    const amount = parseInt(document.getElementById('withdraw-amount').value)
+    const availableBalance = parseInt( document.getElementById('available-Balance').innerText)
+    const totalNewAvailableBalance = availableBalance - amount
+    console.log(totalNewAvailableBalance)
 })
 
 
