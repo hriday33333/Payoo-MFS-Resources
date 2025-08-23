@@ -24,17 +24,20 @@ document.getElementById('add-money-btn').addEventListener('click', function(e){
 
 // cash out money feature
 document.getElementById('withdraw-btn').addEventListener('click', function(e){
-    e.preventDefault
+    e.preventDefault()
     const amount = parseInt(document.getElementById('withdraw-amount').value)
     const availableBalance = parseInt( document.getElementById('available-Balance').innerText)
     const totalNewAvailableBalance = availableBalance - amount
-    console.log(totalNewAvailableBalance)
+    // console.log(totalNewAvailableBalance)
+    document.getElementById('available-Balance').innerText = totalNewAvailableBalance
+
 })
 
 
 
 // togging feture 
 document.getElementById('add-button').addEventListener('click', function(){
+    
     document.getElementById('cash-out-parent').style.display = 'none'
     document.getElementById('add-money-parent').style.display = 'block'
 })
